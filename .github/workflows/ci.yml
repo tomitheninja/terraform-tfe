@@ -6,4 +6,6 @@ on:
 
 jobs:
   terraform-plan:
+    permissions:
+      pull-requests: write
     uses: kir-dev/automations/.github/workflows/terraform-ci.yml@terraform-ci
