@@ -1,0 +1,13 @@
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  terraform-plan:
+    permissions:
+      pull-requests: write
+    uses: kir-dev/automations/.github/workflows/terraform-ci.yml@terraform-ci
+    secrets:
+      TF_TOKEN_APP_TERRAFORM_IO: ${{ secrets.TF_TOKEN_APP_TERRAFORM_IO }}
