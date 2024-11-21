@@ -9,5 +9,4 @@ jobs:
     permissions:
       pull-requests: write
     uses: kir-dev/automations/.github/workflows/terraform-ci.yml@terraform-ci
-    with:
-      GH_TOKEN: ${{ github.token }}
+    secrets: inherit
